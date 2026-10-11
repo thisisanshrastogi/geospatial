@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document id="root_doc">
+<Folder><name>plots</name>
+<Placemark><name>plot_1</name><Polygon><outerBoundaryIs><LinearRing><coordinates>76.27495495495495,9.965495495495495 76.28004504504505,9.965495495495495 76.28004504504505,9.974504504504505 76.27495495495495,9.974504504504505 76.27495495495495,9.965495495495495</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark>
+</Folder>
+</Document></kml>

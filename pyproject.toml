@@ -1,0 +1,54 @@
+[project]
+name = "geospatial-api"
+version = "0.1.0"
+description = "Geospatial File Measurement API: upload zipped Shapefiles or KML, get per-feature measurements"
+readme = "README.md"
+authors = [
+    { name = "Ansh Rastogi", email = "thisisanshrastogi@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi>=0.142.4",
+    "geopandas>=1.2.0",
+    "pydantic-settings>=2.15.0",
+    "pyogrio>=0.13.0",
+    "pyproj>=3.8.0",
+    "python-multipart>=0.0.32",
+    "shapely>=2.2.0",
+    "sqlalchemy>=2.1.4",
+    "uvicorn[standard]>=0.54.0",
+]
+
+[dependency-groups]
+dev = [
+    "httpx>=0.28.1",
+    "mypy>=2.4.0",
+    "pytest>=9.1.1",
+    "ruff>=0.16.10",
+]
+
+[tool.ruff]
+target-version = "py312"
+line-length = 110
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+
+[tool.mypy]
+python_version = "3.12"
+strict = true
+warn_unused_ignores = true
+show_error_codes = true
+# Third-party geospatial libs ship without complete type stubs.
+ignore_missing_imports = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+
+[tool.uv]
+package = false
+
+[build-system]
+requires = ["uv_build>=0.12.23,<0.13.0"]
+build-backend = "uv_build"

@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+.uv/
+
+# uv
+.python-version
+
+# App data
+uploads/
+test_files/
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+file::memory*
+
+# Env
+.env
+
+# Tooling
+.ruff_cache/
+.mypy_cache/
+.pytest_cache/
+htmlcov/
+.coverage
+
+# Editors
+.vscode/
+.idea/
+*.swp
